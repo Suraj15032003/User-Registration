@@ -68,4 +68,4 @@ password = input("Enter your password: ")
 if is_valid_password(password):
     print("Password is valid.")
 else:
-    print("Password is invalid because the length of the password is less then 8")
+    print("Password is invalid because the length of the password is less then 8")#adding the comment why it user get invalid output
