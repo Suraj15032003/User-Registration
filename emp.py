@@ -1,6 +1,6 @@
 import re
 
-def lastname(first_name):
+def lastname(Last_name):
     name_len=len(last_name)
     if name_len<3:
         print("Invalid name")
