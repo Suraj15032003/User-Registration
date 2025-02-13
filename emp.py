@@ -69,3 +69,17 @@ if is_valid_password(password):
     print("Password is valid.")
 else:
     print("Password is invalid.")
+
+
+import re
+
+def is_valid_password(password):
+    if not (re.search(r'[A-Z]', password) and re.search(r'[a-z]', password)):
+        return False
+    return True
+
+password = input("Enter your password: ")
+if is_valid_password(password):
+    print("Password is valid.")
+else:
+    print("Password is invalid beacuse it did't contain uppercase ya lowercase letter so use it .")
