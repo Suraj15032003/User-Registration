@@ -57,15 +57,3 @@ else:
     mob_numb = input("Enter your mobile number: ")
 
 
-
-import re
-
-def is_valid_password(password):
-    if len(password) < 8:
-        return False
-
-password = input("Enter your password: ")
-if is_valid_password(password):
-    print("Password is valid.")
-else:
-    print("Password is invalid.")
