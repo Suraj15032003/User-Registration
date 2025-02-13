@@ -28,3 +28,15 @@ last_name = str(input("Enter your last name: "))
 lastname(last_name)
 
 
+import re
+
+def check_email(email):
+  regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+  if re.match(regex, email):
+    print(f"{email} is a Valid Email Address.")
+  else:
+    print(f"{email} is an Invalid Email Address.")
+
+
+email = input("Enter an email address: ")
+is_valid = check_email(email)
