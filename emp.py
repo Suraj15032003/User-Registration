@@ -55,3 +55,35 @@ if valid_num:
 else:
     print("Invalid mobile number. Please enter again.")
     mob_numb = input("Enter your mobile number: ")
+
+
+
+import re
+
+def is_valid_password(password):
+    if len(password) < 8:
+        return False
+
+    # # Check if password starts with a letter (not a digit or special character)
+    # if not re.match(r'^[A-Za-z]', password):
+    #     return False
+
+    # Checkif password contain at least one digit
+    if not re.search(r'\d', password):
+        return False
+
+    # Check if password contain at least one special character 
+    if not re.search(r'^[@#$%^&*]', password):
+        return False
+
+    # Check if password contains both uppercase and lowercase letters
+    if not (re.search(r'[A-Z]', password) and re.search(r'[a-z]', password)):
+        return False
+
+    return True
+
+password = input("Enter your password: ")
+if is_valid_password(password):
+    print("Password is valid.")
+else:
+    print("Password is invalid.")
