@@ -100,3 +100,20 @@ if is_valid_password(password):
     print("Password is valid.")
 else:
     print("Password is invalid beacuse it did't contain a single digit in your password so use it .")
+
+
+
+
+import re
+
+def is_valid_password(password):
+   # Check if password contain at least one special character 
+    if not re.search(r'^[@#$%^&*]', password):
+        return False
+    return True
+
+password = input("Enter your password: ")
+if is_valid_password(password):
+    print("Password is valid.")
+else:
+    print("Password is invalid beacuse it did't contain a single special character in your password so use it .")
