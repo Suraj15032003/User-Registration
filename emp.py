@@ -7,7 +7,7 @@ def firstname(first_name):
     elif re.match(r'^[A-Z][a-zA-Z]*$', first_name):
         print("valid Name")
     else:
-        print("Invalid")
+        print("Invalid name")
 
 first_name = str(input("Enter your First name "))
 firstname(first_name)
