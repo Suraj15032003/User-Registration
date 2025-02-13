@@ -40,3 +40,18 @@ def check_email(email):
 
 email = input("Enter an email address: ")
 is_valid = check_email(email)
+
+import re
+
+def valid_mobileno(number):
+    pattern = r"^91\s\d{10}$" 
+    return bool(re.match(pattern, number)) 
+
+mob_numb = input("Enter your mobile number: ")
+valid_num = valid_mobileno(mob_numb)
+
+if valid_num:  
+    print("Your mobile number is valid:", mob_numb)
+else:
+    print("Invalid mobile number. Please enter again.")
+    mob_numb = input("Enter your mobile number: ")
