@@ -5,7 +5,7 @@ def firstname(first_name):
     if name_len<3:
         print("Invalid name")
     elif re.match(r'^[A-Z][a-zA-Z]*$', first_name):
-        print("valid Name")
+        print("valid name")
     else:
         print("Invalid name")
 
