@@ -85,3 +85,18 @@ else:
     print("Password is invalid beacuse it did't contain uppercase ya lowercase letter so use it .")
 
 
+
+
+import re
+
+def is_valid_password(password):
+   # Checkif password contain at least one digit
+    if not re.search(r'\d', password):
+        return False
+    return True
+
+password = input("Enter your password: ")
+if is_valid_password(password):
+    print("Password is valid.")
+else:
+    print("Password is invalid beacuse it did't contain a single digit in your password so use it .")
